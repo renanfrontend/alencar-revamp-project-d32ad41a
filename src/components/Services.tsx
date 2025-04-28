@@ -1,6 +1,8 @@
+
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { MessageSquare } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Services = () => {
   const services = [
@@ -48,6 +50,7 @@ const Services = () => {
                   src={service.image}
                   alt={service.title}
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
               </div>
               <CardHeader>
@@ -59,9 +62,11 @@ const Services = () => {
                 </CardDescription>
               </CardContent>
               <CardFooter className="pt-0">
-                <Button variant="outline" className="w-full border-alencar-blue text-alencar-blue hover:bg-alencar-blue/10">
-                  Saiba Mais
-                </Button>
+                <Link to="/servicos" className="w-full">
+                  <Button variant="outline" className="w-full border-alencar-blue text-alencar-blue hover:bg-alencar-blue/10">
+                    Saiba Mais
+                  </Button>
+                </Link>
               </CardFooter>
             </Card>
           ))}
@@ -72,9 +77,19 @@ const Services = () => {
             <h3 className="text-2xl md:text-3xl font-bold mb-2">Precisa de atendimento personalizado?</h3>
             <p className="text-white/90">Entre em contato conosco para uma avaliação gratuita das suas necessidades.</p>
           </div>
-          <Button size="lg" className="bg-white text-alencar-blue hover:bg-white/90 hover:text-alencar-blue-dark flex items-center">
-            <MessageSquare className="mr-2 h-5 w-5" /> Fale Conosco no WhatsApp
-          </Button>
+          <Link to="/contato">
+            <Button size="lg" className="bg-white text-alencar-blue hover:bg-white/90 hover:text-alencar-blue-dark flex items-center">
+              <MessageSquare className="mr-2 h-5 w-5" /> Fale Conosco no WhatsApp
+            </Button>
+          </Link>
+        </div>
+        
+        <div className="mt-12 text-center">
+          <Link to="/servicos">
+            <Button variant="link" className="text-alencar-blue hover:text-alencar-blue-dark text-lg">
+              Ver todos os nossos serviços
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

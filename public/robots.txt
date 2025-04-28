@@ -1,14 +1,25 @@
+
+User-agent: *
+Allow: /
+
+Sitemap: https://grupoalencartratamentos.com.br/sitemap.xml
+
+# Regras específicas para bots de busca principais
 User-agent: Googlebot
 Allow: /
 
 User-agent: Bingbot
 Allow: /
 
+User-agent: Yandexbot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# Bots de mídias sociais
 User-agent: Twitterbot
 Allow: /
 
 User-agent: facebookexternalhit
-Allow: /
-
-User-agent: *
 Allow: /

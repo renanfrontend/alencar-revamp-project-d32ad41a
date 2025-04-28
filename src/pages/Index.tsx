@@ -7,8 +7,49 @@ import About from '@/components/About';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import SchemaOrg from '@/components/SchemaOrg';
 
 const Index = () => {
+  // Schema.org data for LocalBusiness
+  const businessSchema = {
+    name: 'Grupo Alencar Tratamentos',
+    description: 'O Grupo Alencar oferece serviços especializados de enfermagem e cuidados para idosos em São Paulo, garantindo qualidade, respeito e dignidade.',
+    url: 'https://grupoalencartratamentos.com.br',
+    telephone: '+551194233-2485',
+    email: 'contato@grupoalencartratamentos.com.br',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: '',
+      addressLocality: 'São Paulo',
+      addressRegion: 'SP',
+      postalCode: '',
+      addressCountry: 'BR'
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: '-23.5489',
+      longitude: '-46.6388'
+    },
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+        opens: '08:00',
+        closes: '18:00'
+      },
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: 'Saturday',
+        opens: '08:00',
+        closes: '12:00'
+      }
+    ],
+    sameAs: [
+      'https://www.facebook.com/grupoalencartratamentos',
+      'https://www.instagram.com/grupoalencartratamentos'
+    ]
+  };
+
   return (
     <>
       <Helmet>
@@ -21,6 +62,8 @@ const Index = () => {
         <meta property="og:url" content="https://grupoalencartratamentos.com.br" />
         <link rel="canonical" href="https://grupoalencartratamentos.com.br" />
       </Helmet>
+      
+      <SchemaOrg type="LocalBusiness" data={businessSchema} />
       
       <div className="flex flex-col min-h-screen">
         <Header />

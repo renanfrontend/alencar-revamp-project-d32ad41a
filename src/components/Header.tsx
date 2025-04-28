@@ -1,7 +1,6 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Menu, Phone, X } from 'lucide-react';
+import { Menu, Phone, X, FirstAidKit } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,14 +15,12 @@ const Header = () => {
         <div className="flex items-center justify-between py-4">
           <div className="flex items-center">
             <a href="/" className="flex items-center">
-              <img 
-                src="/lovable-uploads/1e3702d9-e756-4942-b237-9d279d34369a.png" 
-                alt="Grupo Alencar Logo" 
-                className="h-12 w-auto object-contain"
-              />
-              <div className="ml-3 hidden sm:block">
-                <h1 className="text-lg font-bold text-alencar-blue-dark">GRUPO ALENCAR</h1>
-                <p className="text-xs text-gray-600">TRATAMENTOS</p>
+              <div className="flex items-center justify-center bg-alencar-blue rounded-lg p-3">
+                <FirstAidKit className="h-8 w-8 text-white" />
+              </div>
+              <div className="ml-3">
+                <h1 className="text-lg font-bold text-alencar-blue-dark tracking-wider">GRUPO ALENCAR</h1>
+                <p className="text-xs text-gray-600 tracking-wide">TRATAMENTOS</p>
               </div>
             </a>
           </div>
@@ -59,20 +56,17 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile menu */}
       {isMenuOpen && (
         <div className="md:hidden fixed inset-0 bg-white z-50 overflow-y-auto">
           <div className="container mx-auto px-4 py-6">
             <div className="flex justify-between items-center mb-8">
               <a href="/" className="flex items-center">
-                <img 
-                  src="/lovable-uploads/1e3702d9-e756-4942-b237-9d279d34369a.png" 
-                  alt="Grupo Alencar Logo" 
-                  className="h-12 w-auto object-contain"
-                />
+                <div className="flex items-center justify-center bg-alencar-blue rounded-lg p-3">
+                  <FirstAidKit className="h-8 w-8 text-white" />
+                </div>
                 <div className="ml-3">
-                  <h1 className="text-lg font-bold text-alencar-blue-dark">GRUPO ALENCAR</h1>
-                  <p className="text-xs text-gray-600">TRATAMENTOS</p>
+                  <h1 className="text-lg font-bold text-alencar-blue-dark tracking-wider">GRUPO ALENCAR</h1>
+                  <p className="text-xs text-gray-600 tracking-wide">TRATAMENTOS</p>
                 </div>
               </a>
               <button 

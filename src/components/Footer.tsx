@@ -31,7 +31,7 @@ const Footer = () => {
                 <Instagram />
               </a>
               <a href="#" className="text-white hover:text-alencar-blue transition-colors">
-                <WhatsApp />
+                <MessageSquare />
               </a>
             </div>
           </div>

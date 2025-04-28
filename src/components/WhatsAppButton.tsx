@@ -1,5 +1,5 @@
 
-import { WhatsApp } from 'lucide-react';
+import { MessageSquare } from 'lucide-react';
 
 const WhatsAppButton = () => {
   return (
@@ -13,7 +13,7 @@ const WhatsAppButton = () => {
       <div className="absolute -top-10 -left-36 bg-white text-gray-800 px-4 py-2 rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
         Fale Conosco!
       </div>
-      <WhatsApp className="h-7 w-7" />
+      <MessageSquare className="h-7 w-7" />
     </a>
   );
 };

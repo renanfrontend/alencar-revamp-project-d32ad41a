@@ -1,7 +1,6 @@
-
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { WhatsApp } from 'lucide-react';
+import { MessageSquare } from 'lucide-react';
 
 const Services = () => {
   const services = [
@@ -74,7 +73,7 @@ const Services = () => {
             <p className="text-white/90">Entre em contato conosco para uma avaliação gratuita das suas necessidades.</p>
           </div>
           <Button size="lg" className="bg-white text-alencar-blue hover:bg-white/90 hover:text-alencar-blue-dark flex items-center">
-            <WhatsApp className="mr-2 h-5 w-5" /> Fale Conosco no WhatsApp
+            <MessageSquare className="mr-2 h-5 w-5" /> Fale Conosco no WhatsApp
           </Button>
         </div>
       </div>

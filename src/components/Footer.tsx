@@ -1,6 +1,5 @@
-
 import { Button } from '@/components/ui/button';
-import { Facebook, Instagram, Mail, Phone, WhatsApp } from 'lucide-react';
+import { Facebook, Instagram, Mail, Phone, MessageSquare } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -70,7 +69,7 @@ const Footer = () => {
               </li>
             </ul>
             <Button className="mt-6 bg-alencar-blue hover:bg-alencar-blue-dark w-full">
-              <WhatsApp className="h-5 w-5 mr-2" /> Fale Conosco
+              <MessageSquare className="h-5 w-5 mr-2" /> Fale Conosco
             </Button>
           </div>
         </div>

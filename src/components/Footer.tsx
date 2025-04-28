@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { Facebook, Instagram, Mail, Phone, MessageSquare } from 'lucide-react';
+import { Facebook, Instagram, Mail, Phone, MessageSquare, Stethoscope } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,11 +10,9 @@ const Footer = () => {
         <div className="py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center mb-6">
-              <img 
-                src="/lovable-uploads/1e3702d9-e756-4942-b237-9d279d34369a.png" 
-                alt="Grupo Alencar Logo" 
-                className="h-12 w-auto object-contain bg-white p-1 rounded"
-              />
+              <div className="flex items-center justify-center bg-alencar-blue rounded-lg p-2">
+                <Stethoscope className="h-8 w-8 text-white" />
+              </div>
               <div className="ml-3">
                 <h3 className="text-lg font-bold text-white">GRUPO ALENCAR</h3>
                 <p className="text-xs text-gray-400">TRATAMENTOS</p>
